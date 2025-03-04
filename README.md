@@ -46,4 +46,8 @@ Here are some ideas to get you started:
 -->
 
 _______________________________________
-git clone https://github.com/Ezaa777/Eza_download.git
+:cara install👇
+
+1: git clone https://github.com/Ezaa777/Eza_download.git
+
+2: termux-setup-storage
