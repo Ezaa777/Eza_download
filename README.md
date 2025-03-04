@@ -56,4 +56,6 @@ _______________________________________
 
 4: termux-setup-storage
 
-5: bash Eza.sh
+5: cd Eza_download
+
+6: bash Eza.sh
