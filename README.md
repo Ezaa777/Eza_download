@@ -50,7 +50,7 @@ _______________________________________
 
 1: pkg update && pkg upgrade
 
-2: pkg i hit -y
+2: pkg i git -y
 
 3: git clone https://github.com/Ezaa777/Eza_download.git
 
