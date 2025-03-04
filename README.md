@@ -51,3 +51,5 @@ _______________________________________
 1: git clone https://github.com/Ezaa777/Eza_download.git
 
 2: termux-setup-storage
+
+3 bash Eza.sh
