@@ -48,8 +48,12 @@ Here are some ideas to get you started:
 _______________________________________
 :cara install👇
 
-1: git clone https://github.com/Ezaa777/Eza_download.git
+1: pkg update && pkg upgrade
 
-2: termux-setup-storage
+2: pkg i hit -y
 
-3 bash Eza.sh
+3: git clone https://github.com/Ezaa777/Eza_download.git
+
+4: termux-setup-storage
+
+5: bash Eza.sh
