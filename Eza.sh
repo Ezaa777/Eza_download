@@ -7,31 +7,37 @@ then
     pkg install figlet -y
 fi
 
-# Logo Wajah Anime ASCII dan Nama Eza
+# Logo Eza
 clear
-echo "****************************************"
-echo "*+****++++*+*+**+-:::::::::::::::::::+##*##*****+*"
-echo "*+*+*+=**=+***+-::::::::::::::::-:::==:*#*###****+"
-echo "*++++==**++**-::::::::::::::::::::::+-::+#+%##****"
-echo "*+=******=*+:::::::::::::::::::::::-=::::+#*###***"
-echo "**++++**+++::::::::::::::::::::---:==:::::+*####**"
-echo "#****#****::::::-:::-::::::::-:::::=+::::::+##%##*"
-echo "#***#*****-::=--:::----:::::---::::-=-:::::=%####*"
-echo "++++*+**+*-::=:::---:----::-=-:-::::-=:::::=%##%##"
-echo "=##+*%##*=-:::::----------:---------:-=:::-+###%##"
-echo "*++*%*=+*-:::::-++==++-:---::=++*=+=-:-=::+-+##%##"
-echo "+#*+++***::::::-+:-+*+:::::::-+**--=:::-===:+%#%##"
-echo "+*###***+::::::--:-=--::::::::=-=:::-:::-==:+%#%##"
-echo "==******++-::::--::::::::::::::::::-::::-+=-*%#%##"
-echo "+++=*=**+*+--:---:::::::::::-::::::-::::=+--**#%##"
-echo "+=**+-#++**=-:----:::::======:::::--::---+*=%#*%#*"
-echo "+*+++=+++***=-:--=--:::::::::::::-=-::-==##*%%#+#*"
-echo "+++*+===:-*=+++-+**+=---:::::--==+=--=+##*%%#**#**"
-echo "++=++++===+==++-=++**++===-====+#%#######+#****##+"
-echo "==+++=+=+++*=====++=++=====----=++*#####*+*****#*+"
+echo ""
+echo "+++++++**+-:::::::::::::::::::+####*****+"
+echo "+++==++-::::::::::::::::-:::==:####+"
+echo "++++==++-::::::::::::::::::::::+-::+#+%##"
+echo "+==+:::::::::::::::::::::::-=::::+####"
+echo "+++++++::::::::::::::::::::---:==:::::+####**"
+echo "##::::::-:::-::::::::-:::::=+::::::+##%##"
+echo "##-::=--:::----:::::---::::-=-:::::=%####"
+echo "++++++-::=:::---:----::-=-:-::::-=:::::=%##%##"
+echo "=##+%##=-:::::----------:---------:-=:::-+###%##"
+echo "++%=+-:::::-++==++-:---::=++=+=-:-=::+-+##%##"
+echo "+#+++::::::-+:-++:::::::-+**--=:::-===:+%#%##"
+echo "+###+::::::--:-=--::::::::=-=:::-:::-==:+%#%##"
+echo "==++-::::--::::::::::::::::::-::::-+=-%#%##"
+echo "+++==+*+--:---:::::::::::-::::::-::::=+--#%##"
+echo "+=+-#++=-:----:::::======:::::--::---+=%#%#"
+echo "++++=+++=-:--=--:::::::::::::-=-::-==##%%#+#"
+echo "++++===:-=+++-++=---:::::--==+=--=+##*%%##"
+echo "++=++++===+==++-=++++===-====+#%#######+###+"
+echo "==+++=+=+++=====++=++=====----=++#####+*****#+"
 echo "****************************************"
 echo ""
 figlet "Eza developer"
+echo ""
+
+# Support Me
+echo "Support Me:"
+echo "TikTok: tiktok.com/@ezaa.vip7"
+echo "GitHub: https://github.com/Ezaa777"
 echo ""
 
 # Pastikan yt-dlp dan ffmpeg sudah terinstal
@@ -59,33 +65,32 @@ echo "5. Video Pinterest"
 read -p "Masukkan pilihan (1-5): " choice
 
 # Minta pengguna memasukkan URL
-echo "Masukkan URL: "
-read url
+read -p "Masukkan URL: " url
 
 case $choice in
     1)
         # Unduh video TikTok
-        yt-dlp "$url" -o "~/storage/downloads/%(id)s.%(ext)s"
+        yt-dlp "$url" -o "/storage/downloads/%(id)s.%(ext)s"
         echo "Video TikTok telah berhasil diunduh ke folder Downloads."
         ;;
     2)
         # Unduh MP3 TikTok
-        yt-dlp -x --audio-format mp3 "$url" -o "~/storage/downloads/%(id)s.%(ext)s"
-        echo "Audio TikTok telah berhasil diunduh ke folder Downloads."
+        yt-dlp -f bestaudio --extract-audio --audio-format mp3 "$url" -o "/storage/downloads/%(title)s.mp3"
+        echo "MP3 TikTok telah berhasil diunduh ke folder Downloads."
         ;;
     3)
         # Unduh video YouTube
-        yt-dlp "$url" -o "~/storage/downloads/%(title)s.%(ext)s"
+        yt-dlp "$url" -o "/storage/downloads/%(title)s.%(ext)s"
         echo "Video YouTube telah berhasil diunduh ke folder Downloads."
         ;;
     4)
         # Unduh MP3 YouTube
-        yt-dlp -x --audio-format mp3 "$url" -o "~/storage/downloads/%(title)s.%(ext)s"
-        echo "Audio YouTube telah berhasil diunduh ke folder Downloads."
+        yt-dlp -f bestaudio --extract-audio --audio-format mp3 "$url" -o "/storage/downloads/%(title)s.mp3"
+        echo "MP3 YouTube telah berhasil diunduh ke folder Downloads."
         ;;
     5)
         # Unduh video Pinterest
-        yt-dlp "$url" -o "~/storage/downloads/%(title)s.%(ext)s"
+        yt-dlp "$url" -o "/storage/downloads/%(title)s.%(ext)s"
         echo "Video Pinterest telah berhasil diunduh ke folder Downloads."
         ;;
     *)
