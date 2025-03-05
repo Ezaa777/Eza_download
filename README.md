@@ -49,6 +49,18 @@ _______________________________________
 
 ini adalah program untuk download di terminal termux di hp
 
+program ini bisa download video tik tok video yt dan video pin
+
+contoh keyk gini: 🎵 Pilih opsi download:
+1️⃣ Video TikTok
+2️⃣ MP3 TikTok
+3️⃣ Video YouTube
+4️⃣ MP3 YouTube
+5️⃣ Video Pinterest
+🔢 Masukkan pilihan (1-5): 1
+🌐 Masukkan URL:
+https://
+
 
 :cara install👇
 
