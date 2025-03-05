@@ -46,6 +46,10 @@ Here are some ideas to get you started:
 -->
 
 _______________________________________
+
+ini adalah program untuk download di terminal termux di hp
+
+
 :cara install👇
 
 1: pkg update && pkg upgrade
